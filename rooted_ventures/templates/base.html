@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Rooted Ventures</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container"></div>
+        <section>
+            <img class="flag" src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="">
+            <img class="flag" src="https://flagicons.lipis.dev/flags/4x3/pl.svg" alt="">
+        </section>
+      <section>
+        <img class="logo" src="{% static 'images/logo.svg' %}" alt="Rooted Ventures Logo">
+        <h1 class="site-heading">Rooted ventures</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="{% url 'information_home' %}">Home</a>
+            </li>
+            {% if user.is_authenticated %}
+              <li>
+                <a href="{% url 'events_dashboard' %}">Dashboard</a>
+              </li>
+            {% endif %}
+            <li>
+              <a href="{% url 'events_list' %}">Events</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <!-- <nav class="auth-nav">
+        {% if user.is_authenticated %}
+          <span>Logged in as: <span class="logged-in-username">{{ user.username }}</span></span>
+          <span> | </span>
+          <a href="{% url 'accounts_logout' %}">Log out</a>
+        {% else %}
+          <a href="{% url 'accounts_login' %}">Log In</a>
+          <span> | </span>
+          <a href="{% url 'accounts_register' %}">Register</a>
+        {% endif %}
+      </nav> -->
+    </div>
+    </header>
+  
+    {% block content %}
+    {% endblock content %}
+  
+  </body>
+  </html>
