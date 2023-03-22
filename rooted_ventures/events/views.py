@@ -62,20 +62,21 @@ def details(request, id):
 
 
 def list(request):
-    check_if_user_profile(request)
+    # check_if_user_profile(request)
 
-    today = datetime.today()
+    # today = datetime.today()
 
-    filter_map = {
-        'title': 'title__icontains',
-        'is_free': 'cost__exact'
-    }
+    # filter_map = {
+    #     'title': 'title__icontains',
+    #     'is_free': 'cost__exact'
+    # }
 
-    filters = {}
-    for key, value in request.GET.items():
-        filter_key = filter_map[key]
-        filters[filter_key] = value
+    # filters = {}
+    # for key, value in request.GET.items():
+    #     filter_key = filter_map[key]
+    #     filters[filter_key] = value
 
-    events = Event.objects.filter(
-        datetime__gte=today).filter(**filters).order_by('datetime')
-    return render(request, 'events/list.html', {'events': events})
+    # events = Event.objects.filter(
+    #     datetime__gte=today).filter(**filters).order_by('datetime')
+    # return render(request, 'events/list.html', {'events': events})
+    return render(request, 'events/list.html')
