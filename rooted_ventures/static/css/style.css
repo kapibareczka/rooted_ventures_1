@@ -7,7 +7,7 @@
 
 
   .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
   }
   
@@ -21,10 +21,13 @@
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: white;
     border-radius: 0.25rem;
     padding: 1rem;
-    box-shadow: var(--shadow)
+    box-shadow: var(--shadow);
+    background-image: url('/static/image/wave.svg');
+    background-size: 100px 200px;
   }
   
   .header > section {
@@ -40,38 +43,11 @@
     border-radius: 100%;
   }
   
-  
-.site-heading {
-    font-size: 1.5rem;
-  }
-  
-  .navbar .site-heading {
-    font-size: 2.25rem;
-    margin-right: 1rem;
-  }
-  
-  .navbar > .auth-nav {
-    justify-self: flex-end;
-  }
-  
-  .navbar nav > ul {
+  .navbar {
     display: flex;
-    align-items: center;
+    flex-direction: row;
   }
-  
-  .navbar nav > ul > li {
-    margin-right: 1rem;
+
+  .navbar > li {
+    margin: 0px 5px 0px 5px;
   }
-  
-  .navbar nav > ul > li > a, .navbar nav > ul > li > span {
-    font-size: 1.125rem;
-  }
-  
-  .logged-in-username {
-    font-weight: bold;
-  }
-  
-  .site-heading {
-    font-size: 1.5rem;
-  }
-  
