@@ -1,6 +1,5 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <main class="main-block-content">
-  <div class="card-background two-thirds-width">
     <section class="hero">
       <div class="hero-section-left">
         <h1 class="site-heading">Work with me</h1>
@@ -15,9 +14,11 @@
       </div>
     </section>
     <section class="card landing-text-container">
-      <h2>About Rooted Ventures</h2>
-      <p class="landing-text">Content about</p>
+      <div class="wave-divider"></div>
+      <div class="about-wrapper">
+        <h2>About Rooted Ventures</h2>
+        <p class="landing-text">Content about</p>
+      </div>
     </section>
-  </div>
 </main>
 {% endblock content %}
