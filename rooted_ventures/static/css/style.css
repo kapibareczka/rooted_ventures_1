@@ -86,6 +86,11 @@
     width: 66%;
   }
 
+  .logo-text {
+    font-size: 20px;
+    font-family: Montserrat, Helvetica, sans-serif;
+  }
+
   .main-block-content {
     width: 100%;
     margin: 0 auto;
@@ -98,7 +103,11 @@
 
   .navbar > li {
     margin: 0px 5px 0px 5px;
+    text-decoration: none;
+    color: black;
   }
+
+
 
   .wave {
     width:100%;
