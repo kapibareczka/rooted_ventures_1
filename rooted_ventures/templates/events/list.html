@@ -1,5 +1,16 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <div class="main-block-content">
-    <h1>Upcoming events</h1>
+  <h1>Upcoming events</h1>
+  <section>
+    <ul>
+      {% for event in events %}
+      <li>
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.description }}</p>
+        <p>{{ event.datetime }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 </div>
 {% endblock content %}
